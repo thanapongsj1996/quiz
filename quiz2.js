@@ -18,7 +18,7 @@ function containerSize(arr) {
         }
     }
     //หาตำแหน่งขอบสุดท้าย
-    if (peak[peak.length - 1] > h && h != 0) lastIndex = hindex
+    if (arr[peak[peak.length - 1]] > h && h != 0) lastIndex = hindex
 
     //หาผลรวมตั้งแต่ต้นจนถึงก่อนขอบสุดท้าย
     for (var i = 0; i < peak.length - 1; i++) {
@@ -35,5 +35,7 @@ function containerSize(arr) {
     return result
 }
 
-var ex = [0, 1, 0, 2, 1, 0, 1, 3, 2, 0, 1, 0, 2]
+var ex = [2, 0, 0, 5, 1, 1, 3]
+//var ex = [3, 1, 0, 2, 4, 0, 2, 0, 4, 0, 1, 2]
+//var ex = [0, 0, 0]
 console.log('result: ', containerSize(ex))
