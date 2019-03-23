@@ -28,14 +28,19 @@ function containerSize(arr) {
     }
 
     //รวมผลลัพธ์ทั้งหมด
-    for (var k = peak[peak.length - 1] + 1; k < lastIndex; k++) {
-        result += arr[lastIndex] - arr[k]
+    if (lastIndex != 0) {
+        for (var k = peak[peak.length - 1] + 1; k < lastIndex; k++) {
+            result += arr[lastIndex] - arr[k]
+        }
     }
 
-    return result
+    return peak
 }
 
-var ex = [2, 0, 0, 5, 1, 1, 3]
+ //var ex = [2,0,0,5,1,1,3]
+ var ex = [3,1,1,5,0,0,2]
 //var ex = [3, 1, 0, 2, 4, 0, 2, 0, 4, 0, 1, 2]
 //var ex = [0, 0, 0]
+//var ex = [3,0,2,0,1]
+//var ex = [1,0,2,0,3]
 console.log('result: ', containerSize(ex))
